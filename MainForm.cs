@@ -41,7 +41,8 @@ namespace FHIRTester {
 				MessageBox.Show("Server URL cannot be empty.", "Server URL");
 				textBoxURL.Focus();
 			} else {
-
+				WebBrowser w = new WebBrowser();
+				
 			}
 		}
 	}
