@@ -1,0 +1,103 @@
+﻿{
+	"resourceType": "ValueSet",
+	"id": "1",
+	"url": "https://mrd2.melanoma.org.au/fhir",
+	"identifier": {
+		"use": "temp",
+		"type": {
+			"coding": [
+				{
+					"system": "https://mrd2.melanoma.org.au/fhir",
+					"version": "20160210",
+					"code": "",
+					"display": "",
+					"userSelected": true
+				}
+			],
+			"text": ""
+		},
+		"system": "https://mrd2.melanoma.org.au/fhir",
+		"value": "VS001",
+		"period": {
+			"start": "2016-02-10",
+			"end": "2016-02-11"
+		}
+	},
+	"version": "20160210",
+	"name": "NCTS Test Value Set",
+	"status": "draft",
+	"experimental": true,
+	"publisher": "NCTS Connecthan",
+	"contact": [
+		{
+			"name": "Jeffrey Chen",
+			"telecom": [
+				{
+					"system": "phone",
+					"value": "+61432199348",
+					"use": "home",
+					"rank": 1,
+					"period": {
+						"start": "2016-02-10",
+						"end": "2016-02-10"
+					}
+				},
+				{
+					"system": "email",
+					"value": "jeffrey.chen@sydney.edu.au",
+					"use": "work",
+					"rank": 2,
+					"period": {
+						"start": "2016-02-10",
+						"end": "2016-02-10"
+					}
+				}
+			]
+		}
+	],
+	"date": "2016-02-10",
+	"lockedDate": "2016-02-11",
+	"description": "Test value set for NCTS Connecthan",
+	"immutable": false,
+	"requirement": "NCTS Connecthan Track 1",
+	"extensible": false,
+	"codeSystem": {
+		"system": "https://mrd2.melanoma.org.au/fhir",
+		"version": "20160210",
+		"caseSensitive": false,
+		"concept": [
+			{
+				"code": "1001",
+				"abstract": false,
+				"display": "left middline",
+				"definition": "unilateral left middline of the body site"
+			},
+			{
+				"code": "1002",
+				"abstract": false,
+				"display": "right middline",
+				"definition": "unilateral right middle of the body site"
+			}
+		]
+	},
+	"compose": {
+		"import": "http://ihtsdo.org/sct",
+		"include": {
+			"system": "http://ihtsdo.org/sct",
+			"version": "20160131",
+			"concept": [
+				{
+					"code": "399488007",
+					"display": "midline"
+				}
+			],
+			"filter": [
+				{
+					"property": "concept",
+					"op": "is-a",
+					"value": "182353008"
+				}
+			]
+		}
+	}
+}
